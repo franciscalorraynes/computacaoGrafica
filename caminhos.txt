@@ -1,0 +1,9 @@
+fllsa@Lorrayne:/mnt/c/Users/fllsa/Desktop/CG$ gcc ppm_create.c -o ppm_create
+fllsa@Lorrayne:/mnt/c/Users/fllsa/Desktop/CG$ ./ppm_create > output.ppm
+fllsa@Lorrayne:/mnt/c/Users/fllsa/Desktop/CG$ convert output.ppm img.ong
+fllsa@Lorrayne:/mnt/c/Users/fllsa/Desktop/CG$ convert output.ppm img.png
+fllsa@Lorrayne:/mnt/c/Users/fllsa/Desktop/CG$ gcc imh100.c -o nova100x100
+fllsa@Lorrayne:/mnt/c/Users/fllsa/Desktop/CG$ ./nova100x100 > output2.ppm
+fllsa@Lorrayne:/mnt/c/Users/fllsa/Desktop/CG$ convert output2.ppm img2.png
+
+mnt/c/Users/fllsa/Desktop/CG
