@@ -21,10 +21,7 @@ void drawLine(unsigned char image[altura][largura][3], int x0, int y0, int x1, i
         e2 = 2*err;
         if(e2 >= dy){ err += dy; x0 += sx;}
         if(e2 >= dx){ err += dx; x0 += sy;}
-    }
-
-
-    
+    }  
 }
 
 int main()
@@ -36,13 +33,22 @@ int main()
     }
 
   unsigned char  image[altura][largura][3];
-    // Preenche a imagem com branco
     for(int y =0; y < altura; y++)
         for(int x =0; x < largura; x++)
         image[y][x][0] = image[y][x][1] = image[y][x][2] = 255;
 
     // Desenha o vetor de (6,7) até (-1,-2)
     drawLine(image, 6, 7, -1, -2);
+    fprintf(fp, "P3\n%d %d\n255\n", largura, altura);
+
+    for(int y =0; y < altura; y++){
+        for( int x =0; x <largura; x++ ){
+            fprintf(fp, " %d %d %d", image[y][x][0], image[y][x][1], image[y][x][2]);
+
+        }
+        fprintf(fp, "\n");
+        return 0;
+    }
 
 
 
